@@ -1,0 +1,96 @@
+html, body {
+    margin: 0px;
+}
+
+body {
+    height: 100vh;
+}
+
+.fullPage {
+    display: flex;
+    background-color: #879cdf;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+}
+
+.separator {
+    background-color: #e9edee;
+    height: 33vh;
+    width: 100%;
+    top: 33%;
+    position: absolute;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    margin-top: 50px;
+    height: 33vh;
+    width: 85vw;
+    background-color: #ff8374;
+    border-radius: 1.0em;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profileImageContainer {
+    height: 150px;
+    width: 150px;
+    background-color: yellow;
+    border-radius: 75px;
+    top: -40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.profileImage {
+    position: relative;
+    background-color: lightgray;
+    height: 140px;
+    width: 140px;
+    border-radius: 70px;
+}
+
+.headerInfo {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 20px;
+    align-items: center;
+
+}
+
+h1, h2, h3, h4 {
+    margin: 0px;
+    margin-bottom: 10px;
+    padding: 0px;
+    font-family: 'Montserrat';
+    color: white;
+}
+
+h1 {
+    font-family: 'Montserrat-Medium';
+}
+
+.socialStatusHandles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialStatusItem {
+    margin-right: 20px;
+    margin-bottom: 0px;
+}
+
+.icon {
+    margin-right: 5px;
+}
