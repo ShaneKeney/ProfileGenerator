@@ -7,11 +7,173 @@
     <title>Profile Generator</title>
 
     <!-- Custom or override css -->
-    <link rel="stylesheet" href="./styles/index.css" />
+    <!-- <link rel="stylesheet" href="./styles/index.css" /> -->
     <link rel="stylesheet" href="./styles/font-imports.css" />
 
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        html, body {
+            margin: 0px;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        .fullPage {
+            display: flex;
+            background-color: #879cdf;
+            height: 100vh;
+            width: 100vw;
+            margin: 0px;
+            padding: 0px;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .separator {
+            background-color: #e9edee;
+            height: 50vh;
+            width: 100%;
+            top: 30%;
+            position: absolute;
+        }
+
+        .header {
+            position: relative;
+            display: flex;
+            margin-top: 50px;
+            height: 33vh;
+            width: 85vw;
+            background-color: #ff8374;
+            border-radius: 1.0em;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .profileInfo {
+            position: relative;
+            display: flex;
+            height: 39vh;
+            width: 85vw;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .profileImageContainer {
+            height: 150px;
+            width: 150px;
+            background-color: yellow;
+            border-radius: 75px;
+            top: -40px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .profileImage {
+            position: relative;
+            height: 140px;
+            width: 140px;
+            border-radius: 70px;
+            background-image: url("https://avatars2.githubusercontent.com/u/53321733?v=4");
+            background-size: cover;
+        }
+
+        .headerInfo {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: 20px;
+            align-items: center;
+
+        }
+
+        h1, h2, h3, h4, a {
+            margin: 0px;
+            margin-bottom: 10px;
+            padding: 0px;
+            font-family: 'Montserrat';
+            color: white;
+            text-decoration: none;
+        }
+
+        h1 {
+            font-family: 'Montserrat-Medium';
+        }
+
+        .socialStatusHandles {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .socialStatusItem {
+            margin-right: 20px;
+            margin-bottom: 0px;
+        }
+
+        .icon {
+            margin-right: 5px;
+        }
+
+        #bio {
+            color: black;
+            margin-top: 20px;
+        }
+
+        .container {
+            height: 60%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .row {
+            flex-grow: 1;
+            display: flex;
+            width: 100%;
+            justify-content: space-between
+        }
+
+        .item {
+            height: 95%;
+            width: 33%;
+            background-color: #ff8374;
+            flex-direction: column;
+            display: flex;
+            border-radius: 1.0em;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #repo, #githubStars {
+            margin-left: 15%;
+        }
+
+        #githubStars {
+            margin-top: 5px;
+        }
+
+        #followers, #following {
+            margin-right: 15%;
+        }
+
+        #following {
+            margin-top: 5px;;
+        }
+
+        .itemText {
+            font-family: 'Montserrat-Bold';
+        }
+    </style>
 </head>
 <body>
     <div class="fullPage">
@@ -30,8 +192,8 @@
 
                 <div class="socialStatusHandles">
                     <h4 class="socialStatusItem"><i class="fa fa-location-arrow icon fa-lg"></i>Richmond, VA</h4>
-                    <h4 class="socialStatusItem"><i class="fa fa-github icon fa-lg"></i>GitHub</h4>
-                    <h4 class="socialStatusItem"><i class="fa fa-rss icon fa-lg"></i>Blog</h4>
+                    <a href= "https://github.com/ShaneKeney" class="socialStatusItem"><i class="fa fa-github icon fa-lg"></i>GitHub</a>
+                    <a href="https://shanekeney.github.io/Bootstrap-Portfolio/" class="socialStatusItem"><i class="fa fa-rss icon fa-lg"></i>Blog</a>
                 </div>
             </div>
         </div>
