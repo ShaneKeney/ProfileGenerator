@@ -13,14 +13,15 @@ body {
     width: 100vw;
     margin: 0px;
     padding: 0px;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .separator {
     background-color: #e9edee;
-    height: 33vh;
+    height: 50vh;
     width: 100%;
-    top: 33%;
+    top: 30%;
     position: absolute;
 }
 
@@ -32,6 +33,15 @@ body {
     width: 85vw;
     background-color: #ff8374;
     border-radius: 1.0em;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profileInfo {
+    position: relative;
+    display: flex;
+    height: 39vh;
+    width: 85vw;
     align-items: center;
     flex-direction: column;
 }
@@ -48,14 +58,16 @@ body {
     align-items: center;
     margin: 0px;
     padding: 0px;
+    box-shadow: 0px 0px 20px black;
 }
 
 .profileImage {
     position: relative;
-    background-color: lightgray;
     height: 140px;
     width: 140px;
     border-radius: 70px;
+    background-image: url("https://avatars2.githubusercontent.com/u/53321733?v=4");
+    background-size: cover;
 }
 
 .headerInfo {
@@ -93,4 +105,55 @@ h1 {
 
 .icon {
     margin-right: 5px;
+}
+
+#bio {
+    color: black;
+    margin-top: 20px;
+}
+
+.container {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row {
+    flex-grow: 1;
+    display: flex;
+    width: 100%;
+    justify-content: space-between
+}
+
+.item {
+    height: 95%;
+    width: 33%;
+    background-color: #ff8374;
+    flex-direction: column;
+    display: flex;
+    border-radius: 1.0em;
+    justify-content: center;
+    align-items: center;
+}
+
+#repo, #githubStars {
+    margin-left: 15%;
+}
+
+#githubStars {
+    margin-top: 5px;
+}
+
+#followers, #following {
+    margin-right: 15%;
+}
+
+#following {
+    margin-top: 5px;;
+}
+
+.itemText {
+    font-family: 'Montserrat-Bold';
 }

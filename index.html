@@ -7,110 +7,11 @@
     <title>Profile Generator</title>
 
     <!-- Custom or override css -->
-    <!-- <link rel="stylesheet" href="./styles/index.css" /> -->
+    <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./styles/font-imports.css" />
 
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <style>
-        html, body {
-            margin: 0px;
-        }
-
-        body {
-            height: 100vh;
-        }
-
-        .fullPage {
-            display: flex;
-            background-color: #879cdf;
-            height: 100vh;
-            width: 100vw;
-            margin: 0px;
-            padding: 0px;
-            justify-content: center;
-        }
-
-        .separator {
-            background-color: #e9edee;
-            height: 33vh;
-            width: 100%;
-            top: 33%;
-            position: absolute;
-        }
-
-        .header {
-            position: relative;
-            display: flex;
-            margin-top: 50px;
-            height: 33vh;
-            width: 85vw;
-            background-color: #ff8374;
-            border-radius: 1.0em;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .profileImageContainer {
-            height: 150px;
-            width: 150px;
-            background-color: yellow;
-            border-radius: 75px;
-            top: -40px;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0px;
-            padding: 0px;
-        }
-
-        .profileImage {
-            position: relative;
-            background-color: lightgray;
-            height: 140px;
-            width: 140px;
-            border-radius: 70px;
-        }
-
-        .headerInfo {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            bottom: 20px;
-            align-items: center;
-
-        }
-
-        h1, h2, h3, h4 {
-            margin: 0px;
-            margin-bottom: 10px;
-            padding: 0px;
-            font-family: 'Montserrat';
-            color: white;
-        }
-
-        h1 {
-            font-family: 'Montserrat-Medium';
-        }
-
-        .socialStatusHandles {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .socialStatusItem {
-            margin-right: 20px;
-            margin-bottom: 0px;
-        }
-
-        .icon {
-            margin-right: 5px;
-        }
-    </style>
 </head>
 <body>
     <div class="fullPage">
@@ -133,6 +34,33 @@
                     <h4 class="socialStatusItem"><i class="fa fa-rss icon fa-lg"></i>Blog</h4>
                 </div>
             </div>
+        </div>
+
+        <div class="profileInfo">
+                <div class="container">
+                    <h1 id="bio">I build things and teach people to code</h1>
+                    <div class="row">
+                        <div class="item" id="repo">
+                            <h2 class="itemText">Public Repositories</h2>
+                            <h3 class="itemText">135</h3>
+                        </div>
+                        <div class="item" id="followers">
+                            <h2 class="itemText">Followers</h2>
+                            <h3 class="itemText">92</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="item" id="githubStars">
+                        <h2 class="itemText">GitHub Stars</h2>
+                        <h3 class="itemText">5</h3>
+                    </div>
+                    <div class="item" id="following">
+                        <h2 class="itemText">Following</h2>
+                        <h3 class="itemText">34</h3>
+                    </div>
+                </div>
         </div>
     </div>
 </body>
