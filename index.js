@@ -12,7 +12,7 @@ var writeToFile = function(pdf) {
     // Write the pdf to the root of the project for view ability
     fs.writeFile(`./developerProfiles/${developerName}.pdf`, pdf, function(res, err) {
         if(err) {
-            console.log("Something went wrong!");
+            console.log("Something went wrong creating pdf!");
         } else {
             console.log("Finished! Your file is located at ./developerProfiles/{username}.pdf");
         }
@@ -75,7 +75,7 @@ async function init() {
 
         convertHTMLToPDF(html, writeToFile, options);
     } catch(err) {
-        console.log(err);
+        console.log("Something went wrong!");
     }
 }
 
