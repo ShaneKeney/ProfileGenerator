@@ -56,8 +56,6 @@ async function init() {
             { key: 'following', value: data.following}
         );
 
-        console.log(test);
-
         let { avatar_url, name, company, blog, location, bio, public_repos, followers, following } = test;
         
         const html = htmlTemplate(
