@@ -42,7 +42,7 @@ async function init() {
         const { data } = await axios.get(queryUrl);
         developerName = userInput.username; 
         
-        let { html_url} = data;
+        let { html_url } = data;
         let test = validate(
             userInput.username, 
             { key: 'avatar_url', value: data.avatar_url},  
