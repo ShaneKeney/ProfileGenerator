@@ -51,7 +51,7 @@ const htmlTemplate = function(
     ) {
 
     let color = colorScheme(favoriteColor);
-
+    
     let html = `
         <!DOCTYPE html>
         <html lang="en">
