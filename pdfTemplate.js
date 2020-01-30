@@ -1,3 +1,40 @@
+const colorScheme = function(color) {
+    let colorSchema = { };
+    switch(color) {
+        case 'red':
+            colorSchema.wrapperBackground = "#DE9967",
+            colorSchema. headerBackground = "#870603",
+            colorSchema.headerColor = "white",
+            colorSchema.photoBorderColor = "white"  
+            break;      
+        case 'green':
+            colorSchema.wrapperBackground = "#E6E1C3",
+            colorSchema. headerBackground = "#C1C72C",
+            colorSchema.headerColor = "black",
+            colorSchema.photoBorderColor = "black" 
+            break;
+        case 'blue':
+            colorSchema.wrapperBackground = "#5F64D3",
+            colorSchema. headerBackground = "#26175A",
+            colorSchema.headerColor = "white",
+            colorSchema.photoBorderColor = "#73448C" 
+            break;
+        case 'pink':
+            colorSchema.wrapperBackground = "#879CDF",
+            colorSchema. headerBackground = "#FF8374",
+            colorSchema.headerColor = "white",
+            colorSchema.photoBorderColor = "#FEE24C" 
+            break;
+        default:
+            colorSchema.wrapperBackground = "#879cdf",
+            colorSchema. headerBackground = "#ff8374",
+            colorSchema.headerColor = "white",
+            colorSchema.photoBorderColor = "yellow" 
+    }
+
+    return colorSchema;
+}
+
 const htmlTemplate = function(
     favoriteColor,
     developerName, 
@@ -13,6 +50,8 @@ const htmlTemplate = function(
     blogURL
     ) {
 
+    let color = colorScheme(favoriteColor);
+
     let html = `
         <!DOCTYPE html>
         <html lang="en">
@@ -21,9 +60,7 @@ const htmlTemplate = function(
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <title>Profile Generator</title>
-        
-            <!-- Custom or override css -->
-            <link rel="stylesheet" href="./styles/font-imports.css" />
+    
         
             <!-- Add icon library -->
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -39,7 +76,7 @@ const htmlTemplate = function(
         
                 .fullPage {
                     display: flex;
-                    background-color: #879cdf;
+                    background-color: ${color.wrapperBackground};
                     height: 100vh;
                     width: 100vw;
                     margin: 0px;
@@ -62,7 +99,7 @@ const htmlTemplate = function(
                     margin-top: 50px;
                     height: 33vh;
                     width: 85vw;
-                    background-color: #ff8374;
+                    background-color: ${color.headerBackground};
                     border-radius: 1.0em;
                     align-items: center;
                     flex-direction: column;
@@ -80,7 +117,7 @@ const htmlTemplate = function(
                 .profileImageContainer {
                     height: 150px;
                     width: 150px;
-                    background-color: yellow;
+                    background-color: ${color.photoBorderColor};
                     border-radius: 75px;
                     top: -40px;
                     position: relative;
@@ -96,7 +133,7 @@ const htmlTemplate = function(
                     height: 140px;
                     width: 140px;
                     border-radius: 70px;
-                    background-image: url("https://avatars2.githubusercontent.com/u/53321733?v=4");
+                    background-image: url("${profileImageURL}");
                     background-size: cover;
                 }
         
@@ -104,9 +141,8 @@ const htmlTemplate = function(
                     display: flex;
                     flex-direction: column;
                     position: absolute;
-                    bottom: 20px;
+                    bottom: 60px;
                     align-items: center;
-        
                 }
         
                 h1, h2, h3, h4, a {
@@ -114,7 +150,7 @@ const htmlTemplate = function(
                     margin-bottom: 10px;
                     padding: 0px;
                     font-family: 'Montserrat';
-                    color: white;
+                    color: ${color.headerColor};
                     text-decoration: none;
                 }
         
@@ -141,6 +177,7 @@ const htmlTemplate = function(
                 #bio {
                     color: black;
                     margin-top: 20px;
+                    text-align: center;
                 }
         
                 .container {
@@ -161,7 +198,7 @@ const htmlTemplate = function(
                 .item {
                     height: 95%;
                     width: 33%;
-                    background-color: #ff8374;
+                    background-color: ${color.headerBackground};
                     flex-direction: column;
                     display: flex;
                     border-radius: 1.0em;

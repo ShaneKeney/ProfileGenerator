@@ -1,6 +1,5 @@
 const inq = require('inquirer');
 const fs = require('fs');
-const util = require('util');
 const axios = require('axios');
 const convertHTMLToPDF = require("pdf-puppeteer");
 const htmlTemplate = require('./pdfTemplate');
@@ -15,7 +14,7 @@ var writeToFile = function(pdf) {
         if(err) {
             console.log("Something went wrong!");
         } else {
-            console.log("Finished! Your file is located at ./generatedProfile.pdf");
+            console.log("Finished! Your file is located at ./developerProfiles/{username}.pdf");
         }
     });
 }
