@@ -39,21 +39,27 @@ async function init() {
         const userInput = await promptUser();
 
         let queryUrl = `https://api.github.com/users/${userInput.username}`;
+        let stars = `https://api.github.com/users/${userInput.username}/starred`;
+
         const { data } = await axios.get(queryUrl);
+        const starArray = await axios.get(stars);
+
+        let numOfStars = starArray.data.length;
         developerName = userInput.username; 
         
         let { html_url } = data;
         let test = validate(
             userInput.username, 
-            { key: 'avatar_url', value: data.avatar_url},  
+            { key: 'avatar_url', value: data.avatar_url },  
             { key: 'name', value: data.name }, 
-            { key: 'company', value: data.company}, 
-            { key: 'blog', value: data.blog}, 
-            { key: 'location', value: data.location}, 
-            { key: 'bio', value: data.bio}, 
-            { key: 'public_repos', value: data.public_repos}, 
-            { key: 'followers', value: null}, 
-            { key: 'following', value: data.following}
+            { key: 'company', value: data.company }, 
+            { key: 'blog', value: data.blog }, 
+            { key: 'location', value: data.location }, 
+            { key: 'bio', value: data.bio }, 
+            { key: 'public_repos', value: data.public_repos }, 
+            { key: 'followers', value: data.followers }, 
+            { key: 'following', value: data.following },
+            { key: 'github_stars', value: numOfStars }
         );
 
         let { avatar_url, name, company, blog, location, bio, public_repos, followers, following } = test;
@@ -68,7 +74,7 @@ async function init() {
             company,
             public_repos,
             followers,
-            null,
+            numOfStars,
             following,
             blog
         );
@@ -110,6 +116,8 @@ const validate = function validate(username, ...args) {
             case 'following':
                 (args[i].value) ? returnObject.following = args[i].value : returnObject.following = "0";
                 break;
+            case 'github_stars':
+                (args[i].value) ? returnObject.following = args[i].value : returnObject.following = "0";
             default:
                 break;
         }
